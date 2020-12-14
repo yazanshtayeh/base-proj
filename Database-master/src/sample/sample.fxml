@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -52,7 +53,7 @@
          </children></Pane>
       <Pane layoutY="91.0" prefHeight="78.0" prefWidth="1227.0" style="-fx-background-color: #000000;">
          <children>
-            <Label fx:id="addbtn" contentDisplay="CENTER" onMouseClicked="#addbtnmouseclicked" prefHeight="78.0" prefWidth="613.5" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                                                                  Add" textFill="WHITE" wrapText="true">
+            <Label fx:id="addbtn" contentDisplay="CENTER" onMouseClicked="#addbtnmouseclicked" prefHeight="78.0" prefWidth="306.75" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                              Add" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Cambria" size="20.0" />
                </font>
@@ -63,7 +64,29 @@
                   <Bloom />
                </effect>
             </Label>
-            <Label fx:id="viewbtn" layoutX="613.0" onMouseClicked="#viewbtnmouseclicked" prefHeight="78.0" prefWidth="614.0" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                                                                View" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Label fx:id="viewbtn" layoutX="307.0" onMouseClicked="#viewbtnmouseclicked" prefHeight="78.0" prefWidth="306.75" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                              View" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label fx:id="viewbtn1" layoutX="614.0" onMouseClicked="#viewbtnmouseclicked" prefHeight="78.0" prefWidth="306.75" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                              Update" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label fx:id="viewbtn11" layoutX="921.0" onMouseClicked="#viewbtnmouseclicked" prefHeight="78.0" prefWidth="306.0" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                              Unknown" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Cambria" size="20.0" />
                </font>
@@ -77,58 +100,85 @@
          </children></Pane>
       <StackPane fx:id="mainstackpane" layoutY="169.0" prefHeight="627.0" prefWidth="1227.0" style="-fx-border-color: white;">
          <children>
-            <Pane fx:id="addpane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white;">
+            <Pane fx:id="addpane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white;" visible="false">
                <children>
                   <Pane prefHeight="57.0" prefWidth="1227.0" style="-fx-border-color: black;">
                      <children>
-                        <Label fx:id="peopleaddbtn" onMouseClicked="#peopleaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="           People">
+                        <Label fx:id="peopleaddbtn" onMouseClicked="#peopleaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="             People">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="136.0" onMouseClicked="#galleriesaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="      Car galleries">
+                        <Label layoutX="136.0" onMouseClicked="#galleriesaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="        Car galleries">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="272.0" onMouseClicked="#privateaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="       Private cars">
+                        <Label layoutX="272.0" onMouseClicked="#privateaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="        Private cars">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="408.0" onMouseClicked="#goveaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="  Governmental cars">
+                        <Label layoutX="408.0" onMouseClicked="#goveaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="Governmental cars">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="544.0" onMouseClicked="#publicaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="       Public cars">
+                        <Label layoutX="544.0" onMouseClicked="#publicaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="         Public cars">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="680.0" onMouseClicked="#taxiaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="        Taxi office">
+                        <Label layoutX="680.0" onMouseClicked="#taxiaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="         Taxi office">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="816.0" onMouseClicked="#workshopaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="        Workshops">
+                        <Label layoutX="816.0" onMouseClicked="#workshopaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="         Workshops">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="952.0" onMouseClicked="#schoolsaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="    Driving schools">
+                        <Label layoutX="952.0" onMouseClicked="#schoolsaddbtnclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="      Driving schools">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
                         <Label layoutX="1091.0" onMouseClicked="#inspectionaddbtnclicked" prefHeight="57.0" prefWidth="137.0" styleClass="labeladd" stylesheets="@d.css" text="  Inspection centers">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
                      </children>
                   </Pane>
-                  <StackPane fx:id="stackpaneadd" layoutY="57.0" prefHeight="569.0" prefWidth="1227.0" style="-fx-background-color: black;" visible="false">
+                  <StackPane fx:id="stackpaneadd" layoutY="57.0" prefHeight="569.0" prefWidth="1227.0" style="-fx-background-color: black;">
                      <children>
                         <Pane fx:id="peopleaddpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
                            <children>
@@ -758,54 +808,194 @@
                <children>
                   <Pane prefHeight="57.0" prefWidth="1227.0" style="-fx-border-color: black;">
                      <children>
-                        <Label prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="           People">
+                        <Label fx:id="peoplebtnbviewpane" onMouseClicked="#peoplebtnbviewpaneclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="              People">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="cargalleriesbtnbviewpane" layoutX="136.0" onMouseClicked="#cargalleriesbtnbviewpaneclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="         Car galleries">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="privatecarsbtnbviewpane" layoutX="272.0" onMouseClicked="#privatecarsbtnbviewpaneclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="         Private cars">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="governmentalbtnbviewpane" layoutX="408.0" onMouseClicked="#governmentalbtnbviewpaneclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="   Govermental cars">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                         </Label>
-                        <Label layoutX="136.0" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="      Car galleries">
+                        <Label fx:id="publiccarsbtnbviewpane" layoutX="544.0" onMouseClicked="#publiccarsbtnbviewpaneclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="           Public cars">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="272.0" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="       Private cars">
+                        <Label fx:id="taxibtnbviewpane" layoutX="680.0" onMouseClicked="#taxibtnbviewpaneclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="           Taxi offices">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="408.0" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="  Govermental cars">
+                        <Label fx:id="workshopsbtnbviewpane" layoutX="816.0" onMouseClicked="#workshopsbtnbviewpaneclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="         Workshops">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="544.0" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="       Public cars">
+                        <Label fx:id="drivingschoolsbtnbviewpane" layoutX="952.0" onMouseClicked="#drivingschoolsbtnbviewpaneclicked" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="      Driving schools">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
-                        <Label layoutX="680.0" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="          Garages">
+                        <Label fx:id="inspectioncentersbtnbviewpane" layoutX="1091.0" onMouseClicked="#inspectioncentersbtnbviewpaneclicked" prefHeight="57.0" prefWidth="137.0" styleClass="labeladd" stylesheets="@d.css" text="   Inspection centers">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
-                        </Label>
-                        <Label layoutX="816.0" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="        Workshops">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label layoutX="952.0" prefHeight="57.0" prefWidth="136.34" styleClass="labeladd" stylesheets="@d.css" text="    Driving schools">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                        </Label>
-                        <Label layoutX="1091.0" prefHeight="57.0" prefWidth="137.0" styleClass="labeladd" stylesheets="@d.css" text="  Inspection centers">
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
+                           <font>
+                              <Font name="Cambria" size="15.0" />
+                           </font>
                         </Label>
                      </children>
                   </Pane>
-                  <StackPane layoutY="57.0" prefHeight="569.0" prefWidth="1227.0" style="-fx-background-color: black;" />
+                  <StackPane fx:id="stackpaneview" layoutY="57.0" prefHeight="569.0" prefWidth="1227.0">
+                     <children>
+                        <Pane fx:id="peopleviewpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Text fill="WHITE" layoutX="42.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see people licenses" wrappingWidth="356.9677864909172">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                              <TextArea layoutX="27.0" layoutY="78.0" prefHeight="455.0" prefWidth="1173.0" />
+                           </children>
+                        </Pane>
+                        <Pane fx:id="cargalleriesviewpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button layoutX="54.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="See all" />
+                              <Button layoutX="492.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Finished" />
+                              <Button layoutX="930.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Not finished" />
+                              <TextArea layoutX="54.0" layoutY="124.0" prefHeight="393.0" prefWidth="1120.0" />
+                              <Text fill="WHITE" layoutX="54.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see car gallieres licenses" wrappingWidth="425.2187641710043">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="privatecarsviewpane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button layoutX="54.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="See all" />
+                              <Button layoutX="492.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Finished" />
+                              <Button layoutX="930.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Not finished" />
+                              <TextArea layoutX="54.0" layoutY="124.0" prefHeight="393.0" prefWidth="1120.0" />
+                              <Text fill="WHITE" layoutX="54.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see private cars licenses" wrappingWidth="425.2187641710043">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="governmentalviewpane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button layoutX="54.0" layoutY="58.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="See all" />
+                              <Button layoutX="492.0" layoutY="58.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Finished" />
+                              <Button layoutX="930.0" layoutY="58.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Not finished" />
+                              <TextArea layoutX="54.0" layoutY="124.0" prefHeight="393.0" prefWidth="1120.0" />
+                              <Text fill="WHITE" layoutX="54.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see governmental cars licenses" wrappingWidth="476.2187641710043">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="publiccarsviewpane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button layoutX="54.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="See all" />
+                              <Button layoutX="492.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Finished" />
+                              <Button layoutX="930.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Not finished" />
+                              <TextArea layoutX="54.0" layoutY="124.0" prefHeight="393.0" prefWidth="1120.0" />
+                              <Text fill="WHITE" layoutX="54.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see public cars licenses" wrappingWidth="425.2187641710043">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="taxiviewpane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button layoutX="54.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="See all" />
+                              <Button layoutX="492.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Finished" />
+                              <Button layoutX="930.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Not finished" />
+                              <TextArea layoutX="54.0" layoutY="124.0" prefHeight="393.0" prefWidth="1120.0" />
+                              <Text fill="WHITE" layoutX="54.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see Taxi offices licenses" wrappingWidth="502.2187641710043">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="workshopsviewpane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button layoutX="54.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="See all" />
+                              <Button layoutX="492.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Finished" />
+                              <Button layoutX="930.0" layoutY="57.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Not finished" />
+                              <TextArea layoutX="54.0" layoutY="124.0" prefHeight="393.0" prefWidth="1120.0" />
+                              <Text fill="WHITE" layoutX="54.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see workshops licenses" wrappingWidth="425.2187641710043">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="drivingschoolsviewpane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button layoutX="54.0" layoutY="55.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="See all" />
+                              <Button layoutX="492.0" layoutY="55.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Finished" />
+                              <Button layoutX="930.0" layoutY="55.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" text="Not finished" />
+                              <TextArea layoutX="54.0" layoutY="124.0" prefHeight="393.0" prefWidth="1120.0" />
+                              <Text fill="WHITE" layoutX="54.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see driving schools licenses" wrappingWidth="569.2187641710043">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <Pane fx:id="inspectioncentersviewpane" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                           <children>
+                              <Button layoutX="54.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" styleClass="labeladd" stylesheets="@d.css" text="See all" />
+                              <Button layoutX="492.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" styleClass="labeladd" stylesheets="@d.css" text="Finished" />
+                              <Button layoutX="930.0" layoutY="56.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="244.0" style="-fx-background-color: white;" styleClass="labeladd" stylesheets="@d.css" text="Not finished" />
+                              <TextArea layoutX="54.0" layoutY="124.0" prefHeight="393.0" prefWidth="1120.0" />
+                              <Text fill="WHITE" layoutX="54.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see inspection centers licenses" wrappingWidth="476.21877808123827">
+                                 <font>
+                                    <Font name="Impact" size="25.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children></StackPane>
                </children></Pane>
             <Pane fx:id="welcomepane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="true">
                <children>

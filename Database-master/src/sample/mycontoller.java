@@ -27,6 +27,16 @@ public class mycontoller {
     public Pane drivingschoolsaddpane;
     public Pane taxiofficeaddpane;
     public StackPane stackpaneadd;
+    public Pane peopleviewpane;
+    public Pane cargalleriesviewpane;
+    public Pane privatecarsviewpane;
+    public Pane governmentalviewpane;
+    public Pane publiccarsviewpane;
+    public Pane workshopsviewpane;
+    public Pane drivingschoolsviewpane;
+    public Pane inspectioncentersviewpane;
+    public Pane taxiviewpane;
+    public StackPane stackpaneview;
 
 
 
@@ -34,6 +44,7 @@ public class mycontoller {
         viewpane.setVisible(false);
         welcomepane.setVisible(false);
         addpane.setVisible(true);
+            stackpaneview.setVisible(false);
             stackpaneadd.setVisible(true);
                 governmentalcarsaddpane.setVisible(false);
                 cargalleriesaddpane.setVisible(false);
@@ -49,8 +60,21 @@ public class mycontoller {
 
     public void viewbtnmouseclicked(MouseEvent mouseEvent) {
         addpane.setVisible(false);
-        viewpane.setVisible(false);
+        viewpane.setVisible(true);
         welcomepane.setVisible(false);
+            stackpaneview.setVisible(true);
+            stackpaneadd.setVisible(false);
+                peopleviewpane.setVisible(true);
+                cargalleriesviewpane.setVisible(false);
+                governmentalviewpane.setVisible(false);
+                publiccarsviewpane.setVisible(false);
+                privatecarsviewpane.setVisible(false);
+                workshopsviewpane.setVisible(false);
+                inspectioncentersviewpane.setVisible(false);
+                taxiviewpane.setVisible(false);
+                drivingschoolsviewpane.setVisible(false);
+
+
 
     }
 
@@ -169,6 +193,115 @@ public class mycontoller {
         publiccarsaddpane.setVisible(false);
         workshopsaddpane.setVisible(false);
         taxiofficeaddpane.setVisible(false);
+    }
+
+
+    public void peoplebtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(true);
+        cargalleriesviewpane.setVisible(false);
+        governmentalviewpane.setVisible(false);
+        publiccarsviewpane.setVisible(false);
+        privatecarsviewpane.setVisible(false);
+        workshopsviewpane.setVisible(false);
+        inspectioncentersviewpane.setVisible(false);
+        taxiviewpane.setVisible(false);
+        drivingschoolsviewpane.setVisible(false);
+    }
+
+    public void cargalleriesbtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(false);
+        cargalleriesviewpane.setVisible(true);
+        governmentalviewpane.setVisible(false);
+        publiccarsviewpane.setVisible(false);
+        privatecarsviewpane.setVisible(false);
+        workshopsviewpane.setVisible(false);
+        inspectioncentersviewpane.setVisible(false);
+        taxiviewpane.setVisible(false);
+        drivingschoolsviewpane.setVisible(false);
+    }
+
+    public void privatecarsbtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(false);
+        cargalleriesviewpane.setVisible(false);
+        governmentalviewpane.setVisible(false);
+        publiccarsviewpane.setVisible(false);
+        privatecarsviewpane.setVisible(true);
+        workshopsviewpane.setVisible(false);
+        inspectioncentersviewpane.setVisible(false);
+        taxiviewpane.setVisible(false);
+        drivingschoolsviewpane.setVisible(false);
+    }
+
+    public void governmentalbtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(false);
+        cargalleriesviewpane.setVisible(false);
+        governmentalviewpane.setVisible(true);
+        publiccarsviewpane.setVisible(false);
+        privatecarsviewpane.setVisible(false);
+        workshopsviewpane.setVisible(false);
+        inspectioncentersviewpane.setVisible(false);
+        taxiviewpane.setVisible(false);
+        drivingschoolsviewpane.setVisible(false);
+    }
+
+    public void publiccarsbtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(false);
+        cargalleriesviewpane.setVisible(false);
+        governmentalviewpane.setVisible(false);
+        publiccarsviewpane.setVisible(true);
+        privatecarsviewpane.setVisible(false);
+        workshopsviewpane.setVisible(false);
+        inspectioncentersviewpane.setVisible(false);
+        taxiviewpane.setVisible(false);
+        drivingschoolsviewpane.setVisible(false);
+    }
+
+    public void workshopsbtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(false);
+        cargalleriesviewpane.setVisible(false);
+        governmentalviewpane.setVisible(false);
+        publiccarsviewpane.setVisible(false);
+        privatecarsviewpane.setVisible(false);
+        workshopsviewpane.setVisible(true);
+        inspectioncentersviewpane.setVisible(false);
+        taxiviewpane.setVisible(false);
+        drivingschoolsviewpane.setVisible(false);
+    }
+
+    public void drivingschoolsbtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(false);
+        cargalleriesviewpane.setVisible(false);
+        governmentalviewpane.setVisible(false);
+        publiccarsviewpane.setVisible(false);
+        privatecarsviewpane.setVisible(false);
+        workshopsviewpane.setVisible(false);
+        inspectioncentersviewpane.setVisible(false);
+        taxiviewpane.setVisible(false);
+        drivingschoolsviewpane.setVisible(true);
+    }
+
+    public void inspectioncentersbtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(false);
+        cargalleriesviewpane.setVisible(false);
+        governmentalviewpane.setVisible(false);
+        publiccarsviewpane.setVisible(false);
+        privatecarsviewpane.setVisible(false);
+        workshopsviewpane.setVisible(false);
+        inspectioncentersviewpane.setVisible(true);
+        taxiviewpane.setVisible(false);
+        drivingschoolsviewpane.setVisible(false);
+    }
+
+    public void taxibtnbviewpaneclicked(MouseEvent mouseEvent) {
+        peopleviewpane.setVisible(false);
+        cargalleriesviewpane.setVisible(false);
+        governmentalviewpane.setVisible(false);
+        publiccarsviewpane.setVisible(false);
+        privatecarsviewpane.setVisible(false);
+        workshopsviewpane.setVisible(false);
+        inspectioncentersviewpane.setVisible(false);
+        taxiviewpane.setVisible(true);
+        drivingschoolsviewpane.setVisible(false);
     }
     //for adding people
     @FXML
@@ -1123,6 +1256,7 @@ public class mycontoller {
         }
 
     }
+
 
 
 }

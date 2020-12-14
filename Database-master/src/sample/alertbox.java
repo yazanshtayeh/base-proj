@@ -20,7 +20,6 @@ public class alertbox {
     label.setText(message);
     Button button = new Button("Close");
     button.setOnAction(event -> window.close());
-
     VBox layout = new VBox(10);
     layout.getChildren().addAll(label,button);
     layout.setAlignment(Pos.CENTER);
