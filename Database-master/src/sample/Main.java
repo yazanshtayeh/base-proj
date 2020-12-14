@@ -15,6 +15,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 1227, 794));
         primaryStage.setResizable(false);
         primaryStage.show();
+        //yazan
 
     }
 
@@ -22,4 +23,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
 }
