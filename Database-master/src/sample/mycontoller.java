@@ -1,7 +1,9 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
@@ -17,6 +19,7 @@ public class mycontoller {
     public Pane addpane;
     public Pane viewpane;
     public Pane welcomepane;
+    public Pane SearchPane;
     public Pane peopleaddpane;
     public Pane governmentalcarsaddpane;
     public Pane publiccarsaddpane;
@@ -37,11 +40,14 @@ public class mycontoller {
     public Pane inspectioncentersviewpane;
     public Pane taxiviewpane;
     public StackPane stackpaneview;
-
+    public Label searchbtn;
+    public Label updatetnb;
+    public Button searchsubmitbutton;
 
 
     public void addbtnmouseclicked(MouseEvent mouseEvent) {
         viewpane.setVisible(false);
+        SearchPane.setVisible(false);
         welcomepane.setVisible(false);
         addpane.setVisible(true);
             stackpaneview.setVisible(false);
@@ -61,6 +67,7 @@ public class mycontoller {
     public void viewbtnmouseclicked(MouseEvent mouseEvent) {
         addpane.setVisible(false);
         viewpane.setVisible(true);
+        SearchPane.setVisible(false);
         welcomepane.setVisible(false);
             stackpaneview.setVisible(true);
             stackpaneadd.setVisible(false);
@@ -76,6 +83,21 @@ public class mycontoller {
 
 
 
+    }
+
+    public void searchbtnmouseclicked(MouseEvent mouseEvent) {
+        addpane.setVisible(false);
+        viewpane.setVisible(false);
+        welcomepane.setVisible(false);
+        SearchPane.setVisible(true);
+
+    }
+
+    public void updatebtnmouseclicked(MouseEvent mouseEvent) {
+        addpane.setVisible(false);
+        viewpane.setVisible(false);
+        welcomepane.setVisible(false);
+        SearchPane.setVisible(false);
     }
 
     public void dvlmouseclicked(MouseEvent mouseEvent) {
@@ -195,7 +217,6 @@ public class mycontoller {
         taxiofficeaddpane.setVisible(false);
     }
 
-
     public void peoplebtnbviewpaneclicked(MouseEvent mouseEvent) {
         peopleviewpane.setVisible(true);
         cargalleriesviewpane.setVisible(false);
@@ -302,6 +323,10 @@ public class mycontoller {
         inspectioncentersviewpane.setVisible(false);
         taxiviewpane.setVisible(true);
         drivingschoolsviewpane.setVisible(false);
+    }
+
+    public void submitSearchBtnClicked(MouseEvent mouseEvent) {
+
     }
     //for adding people
     @FXML
