@@ -7,6 +7,8 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Bloom?>
@@ -103,7 +105,7 @@
          </children></Pane>
       <StackPane fx:id="mainstackpane" layoutY="169.0" prefHeight="627.0" prefWidth="1227.0" style="-fx-border-color: white;">
          <children>
-            <Pane fx:id="welcomepane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+            <Pane fx:id="welcomepane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
                <children>
                   <Text fill="WHITE" layoutX="54.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to DVL Database application" wrappingWidth="1119.1972804166726">
                      <font>
@@ -826,7 +828,7 @@
                      </children></StackPane>
                </children>
             </Pane>
-            <Pane fx:id="viewpane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white;" visible="false">
+            <Pane fx:id="viewpane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white;">
                <children>
                   <Pane prefHeight="57.0" prefWidth="1227.0" style="-fx-border-color: black;">
                      <children>
@@ -903,14 +905,22 @@
                   </Pane>
                   <StackPane fx:id="stackpaneview" layoutY="57.0" prefHeight="569.0" prefWidth="1227.0">
                      <children>
-                        <Pane fx:id="peopleviewpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
+                        <Pane fx:id="peopleviewpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
                            <children>
                               <Text fill="WHITE" layoutX="42.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see people licenses" wrappingWidth="356.9677864909172">
                                  <font>
                                     <Font name="Impact" size="25.0" />
                                  </font>
                               </Text>
-                              <TextArea layoutX="27.0" layoutY="78.0" prefHeight="455.0" prefWidth="1173.0" />
+                              <TableView fx:id="ptableview" layoutX="42.0" layoutY="72.0" prefHeight="466.0" prefWidth="542.0">
+                                <columns>
+                                  <TableColumn fx:id="ssncol" prefWidth="75.0" text="SSN" />
+                                  <TableColumn fx:id="idcol" prefWidth="92.0" text="ID" />
+                                    <TableColumn fx:id="namecol" prefWidth="157.0" text="Name" />
+                                    <TableColumn fx:id="bdcol" prefWidth="113.0" text="Birth Date" />
+                                    <TableColumn fx:id="edcol" minWidth="8.0" prefWidth="107.0" text="Expire Date" />
+                                </columns>
+                              </TableView>
                            </children>
                         </Pane>
                         <Pane fx:id="cargalleriesviewpane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
@@ -1019,7 +1029,7 @@
                         </Pane>
                      </children></StackPane>
                </children></Pane>
-            <Pane fx:id="SearchPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
+            <Pane fx:id="SearchPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" visible="false">
                <children>
                   <ComboBox fx:id="searchcombobox" layoutX="39.0" layoutY="45.0" prefHeight="34.0" prefWidth="357.0" promptText="Click to see options">
                      <items>

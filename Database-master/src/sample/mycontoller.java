@@ -1,17 +1,13 @@
 package sample;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+import java.sql.*;
 
 public class mycontoller {
 
@@ -216,6 +212,25 @@ public class mycontoller {
         workshopsaddpane.setVisible(false);
         taxiofficeaddpane.setVisible(false);
     }
+    //viewing people
+    @FXML
+    private TableView<person> ptableview;
+
+    @FXML
+    private TableColumn<person, Integer> ssncol;
+
+    @FXML
+    private TableColumn<person, String> namecol;
+
+    @FXML
+    private TableColumn<person, Integer> idcol;
+
+    @FXML
+    private TableColumn<person, Date> bdcol;
+
+    @FXML
+    private TableColumn<person, Date> edcol;
+
 
     public void peoplebtnbviewpaneclicked(MouseEvent mouseEvent) {
         peopleviewpane.setVisible(true);
@@ -227,6 +242,49 @@ public class mycontoller {
         inspectioncentersviewpane.setVisible(false);
         taxiviewpane.setVisible(false);
         drivingschoolsviewpane.setVisible(false);
+
+        for ( int i = 0; i<ptableview.getItems().size(); i++) {
+            ptableview.getItems().clear();
+        }
+
+        try {
+            DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
+            Connection con = DriverManager.getConnection(url, "proj", "123456");
+            Statement stm = con.createStatement();
+            String sss;
+            //checking the boxess
+            String lp;
+            String pptl;
+            String pppc;
+            String gd;
+            String daa;
+            String pm;
+            String i;
+            String gggg;
+            String ddvv;
+
+
+            ssncol.setCellValueFactory(new PropertyValueFactory<>("Ssn"));
+            namecol.setCellValueFactory(new PropertyValueFactory<>("Name"));
+            idcol.setCellValueFactory(new PropertyValueFactory<>("Id"));
+            bdcol.setCellValueFactory(new PropertyValueFactory<>("Birthdate"));
+            edcol.setCellValueFactory(new PropertyValueFactory<>("Expiredate"));
+
+            sss = "select * from people";
+
+            ResultSet rst = stm.executeQuery(sss);
+            while (rst.next()) {
+
+                person x = new person(rst.getInt(1), rst.getInt(2), rst.getString(3), rst.getDate(4), rst.getDate(5));
+                ptableview.getItems().add(x);
+            }
+            con.commit();
+            con.close();
+
+
+        } catch (Exception throwables) {
+            alertbox.display("An error happened", "Please make sure that the ownerssn is for an existing person \n and the plate  number and the premit number are unique");
+        }
     }
 
     public void cargalleriesbtnbviewpaneclicked(MouseEvent mouseEvent) {
@@ -1281,7 +1339,4 @@ public class mycontoller {
         }
 
     }
-
-
-
 }

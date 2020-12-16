@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.paint.Color?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.ucontroler"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+    <Pane prefHeight="92.0" prefWidth="1227.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff;" visible="true">
+        <children>
+            <Text fill="WHITE" layoutX="129.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver and Vehicle Licensing Department" wrappingWidth="484.1972961425781">
+                <font>
+                    <Font name="Impact" size="28.0" />
+                </font>
+            </Text>
+            <Text fx:id="logo" layoutX="14.0" layoutY="60.0" onMouseClicked="#dvlmouseclicked" strokeType="OUTSIDE" strokeWidth="0.0" text="DVL" wrappingWidth="108.865234375">
+                <font>
+                    <Font name="Goudy Old Style" size="50.0" />
+                </font>
+                <fill>
+                    <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                            <Stop>
+                                <color>
+                                    <Color />
+                                </color>
+                            </Stop>
+                            <Stop offset="1.0">
+                                <color>
+                                    <Color blue="1.0" green="1.0" red="1.0" />
+                                </color>
+                            </Stop>
+                        </stops>
+                    </LinearGradient>
+                </fill>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+            </Text>
+        </children></Pane>
+    <Pane layoutY="91.0" prefHeight="78.0" prefWidth="1227.0" style="-fx-background-color: #000000;">
+        <children>
+            <Label fx:id="addbtn" contentDisplay="CENTER" onMouseClicked="#addbtnmouseclicked" prefHeight="78.0" prefWidth="306.75" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                              Add" textFill="WHITE" wrapText="true">
+                <font>
+                    <Font name="Cambria" size="20.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <effect>
+                    <Bloom />
+                </effect>
+            </Label>
+            <Label fx:id="viewbtn" layoutX="307.0" onMouseClicked="#viewbtnmouseclicked" prefHeight="78.0" prefWidth="306.75" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                              View" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                <font>
+                    <Font name="Cambria" size="20.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <effect>
+                    <Bloom />
+                </effect>
+            </Label>
+            <Label fx:id="searchbtn" layoutX="614.0" onMouseClicked="#searchbtnmouseclicked" prefHeight="78.0" prefWidth="306.75" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                              Search" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                <font>
+                    <Font name="Cambria" size="20.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <effect>
+                    <Bloom />
+                </effect>
+            </Label>
+            <Label fx:id="updatetnb" layoutX="921.0" onMouseClicked="#updatebtnmouseclicked" prefHeight="78.0" prefWidth="306.0" style="-fx-border-color: #ffffff;" styleClass="labeladd" stylesheets="@d.css" text="                            Update" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                <font>
+                    <Font name="Cambria" size="20.0" />
+                </font>
+                <cursor>
+                    <Cursor fx:constant="HAND" />
+                </cursor>
+                <effect>
+                    <Bloom />
+                </effect>
+            </Label>
+
+        </children></Pane>
+
+</AnchorPane>
